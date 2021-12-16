@@ -1,9 +1,9 @@
 import * as React from "react";
-import { View, Text, SafeAreaView } from "react-native";
+import { View, Text, SafeAreaView, SegmentedControlIOSComponent } from "react-native";
 import { Home_m } from "./Home";
 import Details from "./Details";
 import Constants from "expo-constants";
-
+import colors from "../assets/colors/colors";
 import {
   NavigationContainer,
   createNavigationContainerRef,
@@ -74,9 +74,9 @@ export const Movement = () => {
       <NavigationContainer independent={true} ref={navigationRef}>
         <Tab.Navigator
           screenOptions={{
-            tabBarLabelStyle: { fontSize: 12, color: "white" },
-            tabBarStyle: { backgroundColor: "#212b46" },
-            tabBarIndicatorStyle: { backgroundColor: "white" },
+            tabBarLabelStyle: { fontSize: 12, color: colors.tabBarLabel },
+            tabBarStyle: { backgroundColor: colors.tabBar },
+            tabBarIndicatorStyle: { backgroundColor: colors.tabBarLabel },
             tabBarScrollEnabled: true,
             tabBarBounces: true,
           }}

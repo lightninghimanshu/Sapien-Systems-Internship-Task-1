@@ -17,9 +17,9 @@ export default function Details({ route }) {
           style={[
             {
               alignSelf: "flex-end",
-              // marginEnd: 20,
+             
               paddingVertical: 2,
-              // paddingHorizontal: 20,
+        
               borderTopRightRadius: 30,
               borderBottomLeftRadius: 30,
               width: 100,
@@ -139,7 +139,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: "center",
-    // paddingTop: Constants.statusBarHeight,
+   
     backgroundColor: "#ecf0f1",
     padding: 8,
   },

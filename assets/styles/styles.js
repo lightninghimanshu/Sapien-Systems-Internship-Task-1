@@ -1,55 +1,46 @@
 import { StyleSheet, Dimensions } from "react-native";
-import Constants from "expo-constants";
 
-const window = Dimensions.get("screen");
+import colors from "../colors/colors";
+
 
 export const styles = StyleSheet.create({
   popularWrapper: {
     paddingHorizontal: 20,
   },
   button: {
-    // alignItems: "center",
-    // justifyContent: "center",
-    // paddingVertical: 10,
-    // paddingHorizontal: 32,
     borderRadius: 100,
-    backgroundColor: "white",
-    // borderColor: "grey",
-    borderWidth: 1,
-    borderColor:"#ecf0f1",
     width: 50,
     height: 50,
   },
   text: {
-    // fontSize: 12,
-    // lineHeight: 21,
+
     fontWeight: "bold",
-    // letterSpacing: 0.25,
-    color: "black",
+   
+    color: colors.textColor,
   },
   container: {
     flex: 1,
-    // paddingTop: Constants.statusBarHeight,
+   
     marginLeft: 3,
   },
   listWrapper: {
-    backgroundColor: "white",
+    backgroundColor: colors.listBackground,
     marginTop: 10,
     borderRadius: 30,
     paddingBottom: 10,
   },
   listWrapperTopLvl: {
     alignSelf: "flex-end",
-    // marginEnd: 20,
+    
     paddingVertical: 2,
-    // paddingHorizontal: 20,
+    
     borderTopRightRadius: 30,
     borderBottomLeftRadius: 30,
     width: 100,
   },
   TopLvlText: {
     textAlign: "center",
-    color: "white",
+    color: colors.listLvlText,
   },
   ListImage: {
     height: 100,
@@ -75,7 +66,7 @@ export const styles = StyleSheet.create({
     justifyContent: "space-between",
   },
   listTagText: {
-    backgroundColor: "yellow",
+    backgroundColor: colors.listTag,
     alignSelf: "flex-start",
     borderRadius: 10,
     paddingVertical: 5,
@@ -87,7 +78,7 @@ export const styles = StyleSheet.create({
     fontStyle: "italic",
   },
   listUserImage: { width: 25, height: 25 },
-  listBottomWrapper: {
+  listBottomBorder: {
     borderWidth: 0.5,
     borderStyle: "dashed",
     borderRadius: 1,
@@ -97,11 +88,11 @@ export const styles = StyleSheet.create({
   listPriceText: {
     textAlign: "right",
     marginRight: 10,
-    color: "green",
+    color: colors.price,
   },
   listSubTypeText: {
     textAlign: "right",
     marginRight: 10,
-    color: "lightgrey",
+    color: colors.subType,
   },
 });

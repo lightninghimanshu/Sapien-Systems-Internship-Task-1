@@ -4,9 +4,11 @@ import {
   Text,
   Image,
   Pressable,
+  SegmentedControlIOSComponent,
 } from "react-native";
 import { styles } from "../assets/styles/styles";
 import { navigate } from "./Movement";
+import colors from "../assets/colors/colors";
 import Feather from "react-native-vector-icons/Feather";
 Feather.loadFont();
 
@@ -28,7 +30,7 @@ export const categoryTopRow = ({ item }) => {
           styles.button,
           {
             marginBottom: 10,
-            backgroundColor: item.selected ? "#212b46" : "#c4c4c4",
+            backgroundColor: item.selected ? colors.topRowSelected : colors.topRowUnselected,
           },
         ]}
       ></Pressable>
@@ -37,7 +39,7 @@ export const categoryTopRow = ({ item }) => {
           styles.text,
           {
             width: 56,
-            color: item.selected ? "#212b46" : "#c4c4c4",
+            color: item.selected ? colors.topRowSelected :  colors.topRowUnselected,
             textAlign: "center",
           },
         ]}
@@ -62,10 +64,10 @@ export const listDataRow = ({ item }) => {
               {
                 backgroundColor:
                   item.lvl == "Beginner"
-                    ? "#04bebe"
+                    ?  colors.beginner
                     : item.lvl == "Intermediate"
-                    ? "#d7a72e"
-                    : "#db5461",
+                    ? colors.intermediate
+                    : colors.advanced,
               },
             ]}
           >
@@ -102,7 +104,7 @@ export const listDataRow = ({ item }) => {
               </View>
             </View>
           </View>
-          <View style={styles.listBottomWrapper}></View>
+          <View style={styles.listBottomBorder}></View>
           <Text style={styles.listPriceText}>₹ {item.price}</Text>
           <Text style={styles.listSubTypeText}>per month</Text>
         </View>
